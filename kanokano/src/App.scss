@@ -1,0 +1,51 @@
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.background {
+  background: url('./Assets/background.png');
+  background-size: 65%;
+  animation: move 100s infinite alternate; 
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.triangle {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+width: 0; 
+height: 0; 
+border-left: 150px solid transparent;
+border-right: 150px solid transparent;
+  border-bottom: 300px solid #7CC7FF;
+  animation: clockwise-rotation 120s linear infinite;
+}
+
+.t2{
+  border-bottom: 300px solid #C7FF;
+  top: 25%;
+  left: 75%;
+}
+
+.t3{
+  border-bottom: 300px solid #F2A2FA;
+  top: 60%;
+  left: 35%;
+}
+
+@keyframes clockwise-rotation {
+0%   { transform: rotate(0deg) }
+100% { transform: rotate(360deg); }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
