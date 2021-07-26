@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import reducer from '../Redux/reducers';
 
 const rootReducer = combineReducers({
-    superheroes : reducer,
+    kanokano : reducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

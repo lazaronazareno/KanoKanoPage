@@ -4,6 +4,8 @@ import Layout from './Components/Layout';
 import Home from './Components/Home/Home';
 import Menu from './Components/MainMenu/Menu';
 import Story from './Components/Story/Story';
+import Characters from './Components/Characters/Characters';
+import IndividualCharacter from './Components/Characters/IndividualCharacter';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route exact path={["/", "/home"]} component={Home}/>
             <Route exact path="/menu" component={Menu}/>
             <Route exact path="/story" component={Story}/>
+            <Route exact path="/characters" component={Characters}/>
+            <Route exact path="/character" component={IndividualCharacter}/>
           </Switch>
         </Layout>
       </BrowserRouter>
