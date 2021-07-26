@@ -1,23 +1,32 @@
 .normal {
-    background-color: #0d6efd!important;
+    background-color: rgba(13,110,253)!important;
 }
 
 .character1 {
-    background-color: #FF0000!important;
+    background-color: rgba(255,0,0,0.8)!important;
+    z-index: 1;
 }
 
 .character2 {
-    background-color: #F10172!important;
+    background-color: rgba(241,1,114,0.8)!important;
+    z-index: 1;
 }
 
 .character3 {
-    background-color: #00A0EB!important;
+    background-color: rgba(0,160,235,0.8)!important;
+    z-index: 1;
 }
 
 .character4 {
-    background-color: #FFC800!important;
+    background-color: rgba(255,200,0,0.8)!important;
+    z-index: 1;
 }
 
 .img {
-    height: 700px;
+    height: 600px;
+}
+
+.characters {
+    background-color: rgba(255,255,255,0.8);
+    z-index: 1;
 }

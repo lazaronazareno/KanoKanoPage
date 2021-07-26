@@ -11,7 +11,7 @@ function Characters() {
     const character = useSelector(store => store.kanokano.characters)
 
     return (
-        <div className={`container ${theme}`}>
+        <div className="container characters">
             <div className="d-flex justify-content-evenly">
                 <div>
                     <Link to="/character" onClick={() => dispatch(changeTheme('character1'))}>
@@ -35,7 +35,7 @@ function Characters() {
                 </div>
             </div>
             <div className="d-flex justify-content-center">
-                <Link to="/home" className="btn btn-secondary" onClick={() => dispatch(changeTheme('normal'))}>Back</Link>
+                <Link to="/home" className="btn btn-secondary" onClick={() => dispatch(changeTheme(theme))}>Back</Link>
             </div>
         </div>
     )
