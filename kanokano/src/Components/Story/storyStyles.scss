@@ -18,3 +18,13 @@
 .violet {
     background-color: #BEAEE2;
 }
+
+.responsive {
+    width: 50%!important;
+}
+
+@media (max-width : 840px) {
+    .responsive {
+        width: 100%!important;
+    }
+}

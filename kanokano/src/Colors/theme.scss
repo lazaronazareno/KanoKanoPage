@@ -23,10 +23,44 @@
 }
 
 .img {
-    height: 600px;
+    height: 600px!important;
 }
 
 .characters {
     background-color: rgba(255,255,255,0.8);
     z-index: 1;
+}
+
+.icon {
+    height: 70px!important;
+}
+
+@media (max-width : 500px) {
+    .img {
+        height: 300px!important;
+    }
+    .icon {
+        height: 50px!important;
+    }    
+    .column {
+        flex-direction: column;
+    }
+}
+@media (max-width : 768px) {
+    .column {
+        flex-direction: column;
+        align-items: center;
+    }
+    .characterIcon {
+        width: 150px;
+    }
+}
+@media (max-height : 720px) {
+    .column {
+        flex-direction: column;
+        align-items: center;
+    }
+    .characterIcon {
+        width: 100px;
+    }
 }

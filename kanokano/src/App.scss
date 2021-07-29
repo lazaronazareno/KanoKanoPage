@@ -13,29 +13,34 @@
 }
 
 .triangle {
+  display: flex;
   position: absolute;
   z-index: 0;
-  top: 10%;
-  left: 0%;
   width: 0; 
   height: 0; 
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 300px solid #7CC7FF;
+  border-left: 10vw solid transparent;
+  border-right: 10vw solid transparent;
   animation: clockwise-rotation 120s linear infinite;
 }
 
+.t1{
+  border-bottom: 20vw solid #7CC7FF;
+  top: 15%;
+  left: 0%;
+}
+
 .t2{
-  border-bottom: 300px solid #C7FF;
-  top: 25%;
+  border-bottom: 20vw solid #C7FF;
+  top: 18%;
   left: 75%;
 }
 
 .t3{
-  border-bottom: 300px solid #F2A2FA;
-  top: 60%;
+  border-bottom: 20vw solid #B3E283;
+  top: 50%;
   left: 35%;
 }
+
 
 @keyframes clockwise-rotation {
 0%   { transform: rotate(0deg) }

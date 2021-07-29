@@ -1,14 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import '../../Colors/theme.scss';
 import './styles.scss';
 
 function Home() {
+    const theme = useSelector(store => store.kanokano.theme)
     return (
-        <div className="card d-flex justify-content-center align-items-center h-25 bg-primary div">
+        <div className={`container d-flex flex-column justify-content-center align-items-center text-center div ${theme}`}>
             <h1>KanoKano FanPage</h1>
-            <h2>Bienvenidos</h2>
-            <h2>Solo es para rendir tributo a su obra y sin animos de lucrar con esta pagina</h2>
-            <Link className="btn btn-secondary btn-lg" to="/menu"> Entrar </Link>
+            <h2>Welcome</h2>
+            {theme === 'normal' && (
+                <>
+                    <h2>If you accept the character`s call the theme of the page will change</h2>
+                    <Link to="/characters" className="btn btn-outline-dark btn-lg">Go</Link>
+                </>
+            )}
+            {theme !== 'normal' && (
+                <>
+                    <h2>Look at the New Page Theme!!</h2>
+                    <Link to="/characters" className="btn btn-outline-dark btn-lg">Back</Link>
+                </>
+            )}
         </div>
     )
 }
