@@ -8,6 +8,7 @@ function Menu() {
             <Link className="btn btn-outline-dark btn-lg" to="/story">Story</Link>
             <Link className="btn btn-outline-dark btn-lg" to="/characters">Characters</Link>
             <Link className="btn btn-outline-dark btn-lg" to="/contact">Contact</Link>
+            <Link className="btn btn-outline-dark btn-lg" to="/music">Music</Link>
         </div>
     )
 }

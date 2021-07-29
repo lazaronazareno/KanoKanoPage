@@ -35,6 +35,11 @@
     height: 70px!important;
 }
 
+.video {
+    width: 600px;
+    height: 337.5px;
+}
+
 @media (max-width : 500px) {
     .img {
         height: 300px!important;
@@ -51,11 +56,24 @@
         flex-direction: column;
         align-items: center;
     }
+    .video{
+        width: 400px;
+        height: 225px;
+    }
     .characterIcon {
         width: 150px;
     }
 }
-@media (max-height : 720px) {
+@media (max-height : 600px) {
+    .column {
+        flex-direction: column;
+        align-items: center;
+    }
+    .characterIcon {
+        width: 100px;
+    }
+}
+@media (max-width : 400px) {
     .column {
         flex-direction: column;
         align-items: center;
