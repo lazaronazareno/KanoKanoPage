@@ -1,39 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { isPlaying } from '../../Redux/reducers';
+import sound from '../../Assets/volume.png'
+import mute from '../../Assets/mute.png'
+import './styles.scss'
 
-const useAudio = url => {
-  const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(false);
 
-  const toggle = () => setPlaying(!playing);
+function Player() {
+  const dispatch = useDispatch();
+  const music = useSelector(store => store.kanokano.music)
+  const playing = useSelector(store => store.kanokano.playing)
+  const audio = new Audio(music);
+
+  const toggle = () => dispatch(isPlaying(!playing));
 
   useEffect(() => {
+      audio.load()
       audio.volume = 0.1;
-      audio.autoplay = true;
-      audio.load();
-      console.log(audio)
       playing ? audio.play() : audio.pause();
     },
     [playing]
   );
 
   useEffect(() => {
-    audio.addEventListener('ended', () => setPlaying(false));
     return () => {
-      audio.removeEventListener('ended', () => setPlaying(false));
+      audio.pause()
+      audio.load()
     };
-  }, [playing, toggle]);
-
-  return [playing, toggle];
-};
-
-const Player = ({ url }) => {
-  const [playing, toggle] = useAudio(url);
+  },
+  [toggle]
+);
 
   return (
-    <div id='audio'>
-      <button onClick={toggle}>{playing ? "Pause" : "Play"}</button>
+    <div onClick={toggle}>
+      {playing ? 
+      <img className="sound-button" src={sound} alt="sound"/> : 
+      <img className="sound-button" src={mute} alt="mute"/>}
     </div>
-  );
+      );
 };
 
 export default Player;

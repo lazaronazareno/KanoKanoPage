@@ -1,6 +1,8 @@
 const initialState ={
     "theme" : 'normal',
     "music" : 'https://audio.jukehost.co.uk/zKl5rDHl9ROn28azFlQtKobZJEehiwyz',
+    "playing" : false,
+    "show" : true,
     "characters" : {
         "character1" : {
             "id" : "1",
@@ -62,6 +64,9 @@ const initialState ={
 }
 
 const CHANGE_THEME = 'CHANGE_THEME';
+const CHANGE_MUSIC = 'CHANGE_MUSIC';
+const IS_PLAYING = 'IS_PLAYING';
+const SHOW_PLAYER = 'SHOW_PLAYER';
 
 export default function reducer (state = initialState, action) {
     console.log(action)
@@ -69,7 +74,28 @@ export default function reducer (state = initialState, action) {
         case CHANGE_THEME : 
         return {
             ...state,
-            theme: action.payload
+            theme: action.payload,
+            playing: !state.playing,
+            show : true
+        }
+        case CHANGE_MUSIC :
+        return {
+            ...state,
+            music: action.payload,
+            playing: !state.playing,
+            show : true
+        }
+
+        case IS_PLAYING:
+        return {
+            ...state,
+            playing : action.payload
+        }
+
+        case SHOW_PLAYER:
+        return {
+            ...state,
+            show : false
         }
 
         default : return state
@@ -80,5 +106,25 @@ export const changeTheme = (theme) => (dispatch, getState) => {
     dispatch({
         type: CHANGE_THEME,
         payload: theme
+    })
+}
+
+export const changeMusic = (music) => (dispatch, getState) => {
+    dispatch({
+        type:CHANGE_MUSIC,
+        payload: music
+    })
+}
+export const isPlaying = (playing) => (dispatch, getState) => {
+    dispatch({
+        type:IS_PLAYING,
+        payload : playing
+    })
+}
+
+export const showPlayer = () => (dispatch, getState) => {
+    dispatch({
+        type:SHOW_PLAYER,
+        payload : false
     })
 }

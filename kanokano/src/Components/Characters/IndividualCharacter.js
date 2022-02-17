@@ -2,15 +2,20 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../../Colors/theme.scss'
-import { changeTheme } from '../../Redux/reducers';
+import { changeMusic, changeTheme } from '../../Redux/reducers';
 import decline from '../../Assets/call-red.png';
 import accept from '../../Assets/call-green.png';
-import Player from '../MusicHook';
 
 function IndividualCharacter(props) {
     const dispatch = useDispatch();
     const theme = useSelector(store => store.kanokano.theme)
     const character = useSelector(store => store.kanokano.characters[theme])
+    const music = useSelector(store => store.kanokano.characters[theme].music)
+
+    const ChangeAll = (theme, music) => {
+        dispatch(changeTheme(theme));
+        dispatch(changeMusic(music));
+    }
 
     return (
         <div className={`container d-flex align-items-center ${theme}`}>
@@ -25,14 +30,13 @@ function IndividualCharacter(props) {
                 <span className="text-wrap">{character.food}</span>
                 <span className="text-wrap">{character.birthday}</span>
                 <div className="d-flex justify-content-center">
-                  <Link to="/home" onClick={() => dispatch(changeTheme(theme))}>
+                  <Link to="/home" onClick={() => ChangeAll(theme, music)}>
                       <img className="img-fluid icon m-4" src={accept} alt="accept call"/> 
                   </Link>
                   <Link to="/characters" onClick={() => dispatch(changeTheme('normal'))}>
                       <img className="img-fluid icon m-4" src={decline} alt="decline call"/>
                   </Link>
                 </div>
-                <Player url={character.music} />
             </div>
         </div>
     )

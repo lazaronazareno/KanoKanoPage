@@ -1,4 +1,5 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './App.scss';
 import Layout from './Components/Layout';
 import Home from './Components/Home/Home';
@@ -7,8 +8,11 @@ import Characters from './Components/Characters/Characters';
 import IndividualCharacter from './Components/Characters/IndividualCharacter';
 import Contact from './Components/Contact/Contact';
 import Music from './Components/Music/Music';
+import Player from './Components/MusicHook';
 
 function App() {
+  const show = useSelector(store => store.kanokano.show)
+
   return (
     <div className="App d-flex align-items-center background ">
       <div className="triangle t1"></div>
@@ -26,6 +30,9 @@ function App() {
           </Switch>
         </Layout>
       </BrowserRouter>
+      {show && (
+        <Player />
+      )}
     </div>
   );
 }

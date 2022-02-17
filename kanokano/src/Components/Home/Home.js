@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import '../../Colors/theme.scss';
 import './styles.scss';
-import Player from '../MusicHook';
 
 function Home() {
     const theme = useSelector(store => store.kanokano.theme)
-    const sound = useSelector(store => store.kanokano.music)
     return (
         <div className={`container d-flex flex-column justify-content-center align-items-center text-center div ${theme}`}>
             <h1>KanoKano FanPage</h1>
@@ -29,7 +27,6 @@ function Home() {
                     <Link to="/characters" className="btn btn-outline-dark btn-lg">Back</Link>
                 </>
             )}
-            <Player url={sound} />
         </div>
     )
 }
