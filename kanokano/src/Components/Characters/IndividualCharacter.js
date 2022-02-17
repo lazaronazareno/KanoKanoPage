@@ -5,6 +5,7 @@ import '../../Colors/theme.scss'
 import { changeTheme } from '../../Redux/reducers';
 import decline from '../../Assets/call-red.png';
 import accept from '../../Assets/call-green.png';
+import Player from '../MusicHook';
 
 function IndividualCharacter(props) {
     const dispatch = useDispatch();
@@ -17,7 +18,7 @@ function IndividualCharacter(props) {
             <div className="container d-flex flex-column justify-content-center">
                 <h1>{character.name}</h1>
                 <h1>{character.originalName}</h1>
-                <span className="text-wrap">{character.cv}</span>
+                <span className="text-wrap">{character.CV}</span>
                 <span className="text-wrap">{character.student}</span>
                 <span className="text-wrap">{character.relationship}</span>
                 <span className="text-wrap">{character.info}</span>
@@ -31,6 +32,7 @@ function IndividualCharacter(props) {
                       <img className="img-fluid icon m-4" src={decline} alt="decline call"/>
                   </Link>
                 </div>
+                <Player url={character.music} />
             </div>
         </div>
     )

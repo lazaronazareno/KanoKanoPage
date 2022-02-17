@@ -12,27 +12,27 @@ function Story() {
             <div className="container d-flex align-items-center my-1">
                 <span className="point violet rounded-circle"></span>
                 <div className={`d-flex flex-column rounded-3 ${theme}`}>
-                    <span className="fs-4 text-wrap">主⼈公、直也は⾼校１年⽣。</span>
-                    <span className="fs-4 text-wrap">ずっと好きだった咲に告⽩し、</span>
-                    <span className="fs-4 text-wrap">彼⼥になってもらうことに成功。幸せの絶頂にいた。</span>
+                    <span className="fs-4 text-wrap">The main character, Naoya, is in the first year of high school.</span>
+                    <span className="fs-4 text-wrap">He confessed to Saki, who he had always liked,</span>
+                    <span className="fs-4 text-wrap">Succeeded in getting her to be a girlfriend. He was at the peak of happiness.</span>
                 </div>
             </div>
             <div className="container d-flex justify-content-end align-items-center my-1">
                 <div className={`d-flex flex-column rounded-3 ${theme}`}>
-                    <span className="fs-4 text-wrap">しかし、そんな直也に美少⼥・渚が声をかける。</span>
-                    <span className="fs-4 text-wrap">彼⼥はいきなり、直也に付き合ってほしいと告⽩を迫るのだった。</span>
+                    <span className="fs-4 text-wrap">However, Naoya is suddenly called by Nagisa.</span>
+                    <span className="fs-4 text-wrap">Who urged him to go out with her.</span>
                 </div>
                 <span className="point violet rounded-circle"></span>
             </div>
             <div className="container d-flex align-items-center my-1">
                 <span className="point violet rounded-circle"></span>
                 <div className={`d-flex flex-column rounded-3 ${theme} ms-0`}>
-                    <span className="fs-4 text-wrap">渚のあまりのいい⼈ぶりに⼼が揺れる直也は、ある決断をする…!!</span>
+                    <span className="fs-4 text-wrap">Naoya confuse herself for the first time with Nagisa, and makes a decision ... !!</span>
                 </div>
             </div>
             <div className="container d-flex justify-content-end my-1">
                 <div className={`d-flex flex-column rounded-3 ${theme}`}>
-                    <span className="fs-4 text-wrap">まさかの選択から始まる、ネオスタンダードラブコメ!!</span>
+                    <span className="fs-4 text-wrap">Neo-standard romantic comedy that begins with a ridiculous decision !!</span>
                 </div>
                 <span className="point violet rounded-circle"></span>
             </div>
