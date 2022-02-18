@@ -8,7 +8,7 @@ import Menu from '../MainMenu/Menu';
 function Header() {
     const theme = useSelector(store => store.kanokano.theme)
     return (
-        <header className={`container-fluid d-flex position-absolute top-0 ${theme}`} >
+        <header className={`container-fluid header d-flex position-absolute top-0 ${theme}`}>
             <Link to="/home">
               <img className="img-fluid" src={logo} alt="img"/>
             </Link>
