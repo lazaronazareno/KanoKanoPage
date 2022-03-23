@@ -5,4 +5,4 @@ Kanojo mo Kanojo anime based React-App
 
 ## Preview :
 
-![Alt Text](https://i.ibb.co/HKvbK2w/React-App-Google-Chrome-2022-03-23-17-13-22-Trim.gif)
+![Alt Text](https://i.ibb.co/DwkgjYj/React-App-Google-Chrome-2022-03-23-17-13-22-Trim-1.gif)
